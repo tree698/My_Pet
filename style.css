@@ -10,7 +10,7 @@
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
-  --color-orange: #feb546;
+  /* --color-orange: #feb546; */
   --color-black: #000000;
   /* --color-light-purple: #e4d5fd; */
   --color-purple: #ccadfa;
@@ -22,8 +22,8 @@
   /* Font size */
   --font-large: 48px;
   --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
+  --font-regular: 24px;
+  --font-small: 20px;
   --font-micro: 14px;
 
   /* Font weight */
@@ -33,6 +33,9 @@
 
   /* size */
   --size-border-radius: 6px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Typography */
@@ -105,7 +108,7 @@ button {
   position: sticky;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .navBar__logo {
@@ -158,6 +161,7 @@ button {
   justify-content: center;
   align-items: center;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .home__avatar {
@@ -188,6 +192,72 @@ button {
   border: 3px solid var(--color-white);
   color: var(--color-white);
   transform: scale(1.1);
+}
+
+/* Section Common */
+.section {
+  max-width: 1200px;
+  padding: 50px;
+  text-align: center;
+  margin: auto;
+}
+
+/* about */
+.about__characters {
+  display: flex;
+  justify-content: space-between;
+  margin: 80px 0;
+}
+
+.about__character {
+  width: 22opx;
+}
+
+.about__icon {
+  width: 200px;
+  height: 200px;
+  border: 3px solid var(--color-blue);
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 24px;
+  line-height: 200px;
+  font-size: 68px;
+  color: var(--color-blue);
+}
+
+.about__icon i {
+  transition: all var(--animation-duration) ease;
+}
+
+.about__icon:hover i {
+  color: var(--color-dark-yellow);
+  transform: rotate(360deg) scale(1.2);
+}
+
+.about__icon:hover {
+  border: 3px solid var(--color-dark-yellow);
+}
+
+.title,
+.description {
+  color: var(--color-dark-grey);
+}
+
+.about__training {
+  display: flex;
+  margin-left: 320px;
+}
+
+.training__img {
+  width: 80px;
+  height: 80px;
+  margin-right: 12px;
+}
+
+.training__name,
+.training__period {
+  text-align: left;
+  color: var(--color-grey);
 }
 
 @media screen and (max-width: 1200px) {

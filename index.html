@@ -36,6 +36,7 @@
         <li class="navBar__menu__item">연락처</li>
       </ul>
     </nav>
+
     <section id="home">
       <img class="home__avatar" src="./img/home/main.png" alt="예삐 사진" />
       <h1 class="home__title">
@@ -44,56 +45,60 @@
         <button class="home__contact">연락처</button>
       </h1>
     </section>
-    <section id="about">
-      <h1>예삐는 누구?</h1>
-      <p>
-        베트남에서 태어난 예삐는 태어난지 한달이 지난 뒤에 저에게 입양되었어요.
-        제가 베트남을 떠날때까지 2년 동안의 시간을 함께 보냈답니다. 지금은
+
+    <section id="about" class="section">
+      <h1>소개</h1>
+      <h2>
+        베트남에서 태어난 예삐는 태어난지 한달이 지난 뒤에 저에게
+        입양되었어요.<br />
+        제가 베트남을 떠날때까지 2년 동안의 시간을 함께 보냈답니다. <br />지금은
         따뜻한 베트남 주인을 만나 행복하게 살고 있답니다.
-      </p>
-      <div class="about__character">
-        <div class="character">
-          <div class="character__icon">
+      </h2>
+      <div class="about__characters">
+        <div class="about__character">
+          <div class="about__icon">
             <i class="fa-solid fa-house"></i>
           </div>
-          <div class="title">태어 난 곳</div>
-          <div class="description">베트남 <br />중부도시 후에</div>
+          <h2 class="title">태어 난 곳</h2>
+          <p class="description">베트남 <br />중부도시 <br />후에</p>
         </div>
-        <div class="character">
-          <div class="major__icon">
+        <div class="about__character">
+          <div class="about__icon">
             <i class="fa-solid fa-cat"></i>
           </div>
-          <div class="title">기본 성격</div>
-          <ul class="description">
-            <li>아주 시크함</li>
-            <li>낯을 많이 가림</li>
-            <li>식탐이 아주 많음</li>
-          </ul>
+          <h2 class="title">기본 성격</h2>
+          <p class="description">
+            아주 시크함 <br />낯을 많이 가림 <br />식탐이 아주 많음
+          </p>
         </div>
-        <div class="character">
-          <div class="character__icon">
-            <i class="fa-regular fa-face-grin-wink"></i>
+        <div class="about__character">
+          <div class="about__icon">
+            <i class="fa-solid fa-thumbs-up"></i>
           </div>
-          <div class="title">잘 하는 것</div>
-          <ul class="description">
-            <li>집사 어깨 위에 올라 앉기</li>
-            <li>대소변 가리기</li>
-            <li>집안의 벌레 잡기</li>
-          </ul>
+          <h2 class="title">잘 하는 것</h2>
+          <p class="description">
+            대소변 가리기 <br />집사 어깨 위에 올라 앉기 <br />집안의 벌레 잡기
+          </p>
+        </div>
+      </div>
+      <h2>- 경력 -</h2>
+      <div class="about__training">
+        <img class="training__img" src="./img/about/cat.png" alt="고양이" />
+        <div class="training__description">
+          <p class="training__name">고양이로써 가져야 할 기초 소양 교육 받음</p>
+          <p class="training__period">May. 2013 ~ Jun. 2013</p>
         </div>
       </div>
       <div class="about__training">
-        <img src="./img/about/cat.png" alt="고양이" />
-        <p class="training__name">고양이로써 가져야 할 기초 소양 교육 받음</p>
-        <p class="training__period">May. 2013 ~ Jun. 2013</p>
-      </div>
-      <div class="about__training">
-        <img src="./img/about/tree.png" alt="나무" />
-        <p class="training__name">저와 함께 생활함</p>
-        <p class="training__period">July. 2013 ~ Jun. 2015</p>
+        <img class="training__img" src="./img/about/tree.png" alt="나무" />
+        <div class="training__description">
+          <p class="training__name">저와 함께 생활함</p>
+          <p class="training__period">July. 2013 ~ Jun. 2015</p>
+        </div>
       </div>
     </section>
-    <section id="skills">
+
+    <section id="skills" class="section">
       <h1>스킬</h1>
       <h3>예삐의 스킬들은 어느 정도인가?</h3>
       <p>
@@ -161,7 +166,8 @@
         </div>
       </div>
     </section>
-    <section id="gallery">
+
+    <section id="gallery" class="section">
       <h1>갤러리</h1>
       <h3>예삐와 함께 했던 순간들..</h3>
       <div class="gallery__categories">
@@ -229,7 +235,8 @@
         <span>세상 편한 자세</span>
       </div>
     </section>
-    <section id="testimonials">
+
+    <section id="testimonials" class="section">
       <h1>주변 평판</h1>
       <h3>예삐 친구들은 이렇게 말합니다</h3>
       <div class="testimonials">
@@ -268,7 +275,8 @@
         </div>
       </div>
     </section>
-    <section id="contact">
+
+    <section id="contact" class="section">
       <h1 class="contact__title">Let's talk</h1>
       <h3 class="contact__email">tree698@gmail.com</h3>
       <div class="contace__links">
