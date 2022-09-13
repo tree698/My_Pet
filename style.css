@@ -152,7 +152,7 @@ button {
   border: 1px solid var(--color-white);
 }
 
-/* home */
+/* Section: home */
 #home {
   background: url(./img/home/bg4.png) center/contain no-repeat;
   background-color: #e8d478;
@@ -203,7 +203,7 @@ button {
   margin: auto;
 }
 
-/* about */
+/* Section: about */
 .about__characters {
   display: flex;
   justify-content: space-between;
@@ -267,10 +267,10 @@ button {
   color: var(--color-grey);
 }
 
-/* skills */
+/* Section: skills */
 #skills {
   background-color: var(--color-light-purple);
-  margin: 50px 0;
+  margin-top: 50px;
 }
 .skillset {
   display: flex;
@@ -323,6 +323,113 @@ button {
   height: 8px;
   background-color: var(--color-orange);
 }
+
+/* Section: Gallery */
+#gallery {
+  margin-top: 50px;
+}
+.gallery__categories {
+  width: 740px;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px auto;
+}
+
+.category__btn {
+  width: 180px;
+  height: 60px;
+  font-size: var(--font-medium);
+  border: 1px solid var(--color-dark-grey);
+  border-radius: var(--size-border-radius);
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-yellow);
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  color: var(--color-white);
+  width: 32px;
+  height: 32px;
+  line-height: 36px;
+  display: inline-block;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all 250ms ease-in;
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0;
+}
+
+.gallery__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery {
+  width: 360px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+  position: relative;
+}
+
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+}
+
+.gallery__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  font-size: var(--font-medium);
+  opacity: 0;
+  transition: all 250ms ease-in;
+  transform: translateY(20px);
+}
+
+.gallery__description span:first-child::after {
+  content: '';
+  display: block;
+  width: 75px;
+  height: 3px;
+  position: relative;
+  left: 50%;
+  margin-left: -34px;
+  margin-bottom: 12px;
+  background-color: var(--color-white);
+}
+
+.gallery:hover .gallery__description {
+  opacity: 0.8;
+  transform: translateY(0);
+}
+
+/* #testimonials {
+  margin-top: 50px;
+}
+
+#contact {
+  margin-top: 50px;
+} */
 
 @media screen and (max-width: 1200px) {
   #home {
