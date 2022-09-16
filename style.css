@@ -398,7 +398,7 @@ button {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--color-black);
+  background-color: var(--color-dark-yellow);
   color: var(--color-white);
   font-size: var(--font-medium);
   opacity: 0;
@@ -466,9 +466,27 @@ button {
   margin-top: 8px;
 }
 
-/* #contact {
-  margin-top: 50px;
-} */
+/* Section: Contact */
+#contact {
+  background-color: var(--color-dark-yellow);
+  padding-top: 30px;
+}
+
+.contact__title,
+.contact__email,
+.contact__links,
+.contact__right {
+  color: var(--color-white);
+}
+
+.contact__links {
+  font-size: var(--font-large);
+  margin: 20px 0;
+}
+
+.contact__right {
+  font-size: var(--font-medium);
+}
 
 @media screen and (max-width: 1200px) {
   #home {
