@@ -45,6 +45,21 @@ document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// Arrow up button
+const arrowUpBtn = document.querySelector('.arrow-up');
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUpBtn.classList.add('visible');
+  } else {
+    arrowUpBtn.classList.remove('visible');
+  }
+});
+
+arrowUpBtn.addEventListener('click', () => {
+  scrollIntoView('#home');
+});
+
 // toggle menu bars
 const navBarMenuBar = document.querySelector('.navBar__menu-bar');
 

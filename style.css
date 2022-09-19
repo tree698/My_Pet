@@ -501,6 +501,28 @@ button {
   font-size: var(--font-medium);
 }
 
+/* Arrow up button */
+.arrow-up {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--color-dark-pink);
+  position: fixed;
+  bottom: 60px;
+  right: 60px;
+  color: var(--color-white);
+  font-size: var(--font-large);
+  padding-top: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms ease-in;
+}
+
+.arrow-up.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media screen and (max-width: 1200px) {
   #navBar {
     display: flex;
