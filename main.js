@@ -14,43 +14,35 @@ document.addEventListener('scroll', () => {
 
 // Scroll to section
 const navBarMenu = document.querySelector('.navBar__menu');
-// const home = document.querySelector('#home');
-// const about = document.querySelector('#about');
-// const skills = document.querySelector('#skills');
-// const gallery = document.querySelector('#gallery');
-// const testimonials = document.querySelector('#testimonials');
-// const contact = document.querySelector('#contact');
 
 navBarMenu.addEventListener('click', (event) => {
   const target = event.target.dataset.link;
+  if (target == null) {
+    return;
+  }
+  scrollIntoView(`#${target}`);
+});
+
+// Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector('.home__contact');
+homeContactBtn.addEventListener('click', () => {
+  scrollIntoView('#contact');
+});
+
+function scrollIntoView(selector) {
   document
-    .querySelector(`#${target}`)
+    .querySelector(selector)
     .scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
 
-  // target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+// Transparent Home
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().height;
 
-  // switch (target) {
-  //   case home:
-  //     home.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  //     break;
-  //   case about:
-  //     about.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  //     break;
-  //   case skills:
-  //     skills.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  //     break;
-  //   case gallery:
-  //     gallery.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  //     break;
-  //   case testimonials:
-  //     testimonials.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  //     break;
-  //   case contact:
-  //     contact.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  //     break;
-  //   default:
-  //     home.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  // }
+document.addEventListener('scroll', () => {
+  // const opacity = `${1 - Math.floor(window.scrollY / 100) / 10}`;
+  // home.style.opacity = opacity;
+  home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
 // toggle menu bars
