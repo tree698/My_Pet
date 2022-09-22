@@ -217,6 +217,11 @@ button {
 }
 
 /* Section: about */
+.about__intor {
+  width: 92%;
+  margin: 8px auto;
+}
+
 .about__characters {
   display: flex;
   justify-content: space-between;
@@ -263,9 +268,13 @@ button {
   border: 1px solid #ececec;
 }
 
+.training__container {
+  width: 42%;
+  margin: auto;
+}
+
 .about__training {
   display: flex;
-  margin-left: 310px;
 }
 
 .training__img {
@@ -335,6 +344,12 @@ button {
 .skill__value {
   height: 8px;
   background-color: var(--color-orange);
+}
+
+.skill__description.right {
+  margin-left: 0;
+  padding-left: 0;
+  text-align: center;
 }
 
 /* Section: Gallery */
@@ -539,6 +554,15 @@ button {
 }
 
 @media screen and (max-width: 1200px) {
+  :root {
+    /* Font size */
+    --font-large: 36px;
+    --font-medium: 24px;
+    --font-regular: 20px;
+    --font-small: 18px;
+    --font-micro: 15px;
+  }
+
   #navBar {
     display: flex;
     flex-direction: column;
@@ -571,16 +595,26 @@ button {
     background: url(./img/home/bg5.png) center/contain no-repeat;
     background-color: #e8d478;
     height: 700px;
+    margin: 0;
+  }
+
+  .home__avatar {
+    margin-right: 0;
   }
 
   .home__title {
     color: var(--color-black);
   }
 
+  .section {
+    padding: 16px;
+  }
+
   .about__characters {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 40px 0 0 0;
   }
 
   .about__character {
@@ -610,8 +644,18 @@ button {
     border-radius: 0 0 12px 12px;
   }
 
-  .skill__description.right {
-    margin-left: 32%;
+  #gallery {
+    margin-top: 0;
+  }
+
+  .gallery__categories {
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .category__btn {
+    width: 100%;
+    margin-bottom: 3px;
   }
 
   .gallery {
@@ -625,5 +669,167 @@ button {
   .testimonial__avatar {
     width: 150px;
     height: 150px;
+  }
+
+  .arrow-up {
+    width: 60px;
+    height: 60px;
+    padding: 6px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  :root {
+    /* Font size */
+    --font-large: 23px;
+    --font-medium: 16px;
+    --font-regular: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+  }
+
+  #navBar {
+    padding: 16px 22px;
+  }
+
+  .navBar__logo .logo {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navBar__menu-bar {
+    font-size: 24px;
+    top: 24px;
+    right: 22px;
+  }
+
+  #home {
+    height: auto;
+  }
+  .home__avatar {
+    width: 100px;
+  }
+
+  .home__contact {
+    width: 80px;
+    margin-top: 12px;
+    padding: 6px;
+  }
+
+  .about__characters {
+    margin: 20px 0 0 0;
+  }
+
+  .about__character {
+    width: 200px;
+    margin-bottom: 16px;
+  }
+
+  .about__icon {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin: 0 10px 0 0;
+    font-size: 30px;
+  }
+
+  .title__description {
+    width: 100%;
+  }
+  .title {
+    margin: 0;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .divider {
+    margin-bottom: 22px;
+  }
+
+  .training__container {
+    width: 84%;
+  }
+
+  .training__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #skills {
+    margin-top: 0;
+  }
+
+  #skills .section p {
+    width: 84%;
+    margin: auto;
+  }
+
+  .skillset {
+    margin: 20px 0;
+  }
+
+  .skillset__right {
+    padding: 20px;
+  }
+
+  .gallery__categories {
+    margin: 20px auto;
+  }
+
+  .category__btn {
+    width: 80%;
+    height: 30px;
+    margin: auto;
+  }
+
+  .category__count {
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+  }
+
+  #testimonials {
+    margin-top: 0;
+  }
+
+  .testimonials {
+    margin: 0;
+  }
+
+  .testimonial {
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .testimonial__avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .testimonial__avatar:nth-child(odd),
+  .testimonial__avatar:nth-child(even) {
+    margin: 0 0 10px 0;
+  }
+
+  .testimonial__speech-bubble {
+    padding: 12px 16px;
+    order: 1;
+  }
+
+  #contact {
+    padding-top: 0;
+  }
+
+  .contact__links {
+    margin: 0;
+  }
+
+  .arrow-up {
+    width: 36px;
+    height: 36px;
+    bottom: 24px;
+    right: 24px;
   }
 }

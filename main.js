@@ -32,7 +32,7 @@ homeContactBtn.addEventListener('click', () => {
 function scrollIntoView(selector) {
   document
     .querySelector(selector)
-    .scrollIntoView({ behavior: 'smooth', block: 'center' });
+    .scrollIntoView({ behavior: 'smooth', block: 'end' });
 }
 
 // Transparent Home
@@ -40,8 +40,6 @@ const home = document.querySelector('#home');
 const homeHeight = home.getBoundingClientRect().height;
 
 document.addEventListener('scroll', () => {
-  // const opacity = `${1 - Math.floor(window.scrollY / 100) / 10}`;
-  // home.style.opacity = opacity;
   home.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
@@ -62,6 +60,13 @@ arrowUpBtn.addEventListener('click', () => {
 
 // toggle menu bars
 const navBarMenuBar = document.querySelector('.navBar__menu-bar');
+const navBarMenuItem = document.querySelectorAll('.navBar__menu__item');
+
+navBarMenuItem.forEach((bar) =>
+  bar.addEventListener('click', () => {
+    navBarMenu.classList.toggle('hide');
+  })
+);
 
 navBarMenuBar.addEventListener('click', () => {
   navBarMenu.classList.toggle('hide');
@@ -106,39 +111,3 @@ function addActive(element, dataName) {
       : child.classList.remove('active');
   }
 }
-
-// const allBtn = document.querySelector('.category__btn.all');
-// const babyBtn = document.querySelector('.category__btn.baby');
-// const growBtn = document.querySelector('.category__btn.grow');
-// const adultBtn = document.querySelector('.category__btn.adult');
-
-// allBtn.addEventListener('click', () => {
-//   displayAll(galleryContainer);
-//   addActive(galleryCategories, 'all');
-// });
-// babyBtn.addEventListener('click', () => {
-//   filterImages(galleryContainer, 'baby');
-//   addActive(galleryCategories, 'baby');
-// });
-// growBtn.addEventListener('click', () => {
-//   filterImages(galleryContainer, 'grow');
-//   addActive(galleryCategories, 'grow');
-// });
-// adultBtn.addEventListener('click', () => {
-//   filterImages(galleryContainer, 'adult');
-//   addActive(galleryCategories, 'adult');
-// });
-
-// function filterImages(element, dataName) {
-//   for (const child of element.children) {
-//     child.dataset.name !== dataName
-//       ? child.classList.add('hide')
-//       : child.classList.remove('hide');
-//   }
-// }
-
-// function displayAll(element) {
-//   for (const child of element.children) {
-//     child.classList.remove('hide');
-//   }
-// }
