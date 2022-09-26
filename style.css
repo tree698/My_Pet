@@ -10,11 +10,9 @@
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
-  /* --color-orange: #feb546; */
   --color-black: #000000;
   --color-light-purple: #e4d5fd;
   --color-purple: #ccadfa;
-  /* --color-dark-purple: #615371; */
   --color-yellow: #e8d478;
   --color-dark-yellow: #d6c26b;
   --color-orange: #ff9100;
@@ -98,22 +96,21 @@ button {
 
 /* navBar */
 #navBar {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 16px 38px;
   color: var(--color-black);
   font-weight: var(--weight-bold);
-  background-color: var(--color-yellow);
-  position: sticky;
-  top: 0;
-  left: 0;
+  background-color: transparent;
+  position: fixed;
   transition: all 250ms ease-in;
   z-index: 1;
 }
 
 #navBar.navBar--dark {
-  background-color: var(--color-dark-yellow);
+  background-color: var(--color-yellow);
 }
 
 .navBar__logo {
@@ -167,7 +164,7 @@ button {
 
 /* Section: home */
 #home {
-  background: url(./img/home/bg4.png) center/contain no-repeat;
+  background: url(./img/home/bg6.png) center/contain no-repeat;
   background-color: #e8d478;
   height: 800px;
   display: flex;
@@ -356,6 +353,7 @@ button {
 #gallery {
   margin-top: 50px;
 }
+
 .gallery__categories {
   width: 740px;
   display: flex;
@@ -448,6 +446,7 @@ button {
 .gallery__description span:first-child {
   color: yellow;
 }
+
 .gallery__description span:first-child::after {
   content: '';
   display: block;
@@ -511,7 +510,7 @@ button {
 
 /* Section: Contact */
 #contact {
-  background-color: var(--color-dark-yellow);
+  background-color: var(--color-yellow);
   padding-top: 30px;
 }
 
@@ -519,7 +518,7 @@ button {
 .contact__email,
 .contact__links,
 .contact__right {
-  color: var(--color-white);
+  color: var(--color-black);
 }
 
 .contact__links {
@@ -567,6 +566,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-yellow);
   }
 
   .navBar__menu {
@@ -592,13 +592,14 @@ button {
   #home {
     text-align: center;
     flex-direction: column;
-    background: url(./img/home/bg5.png) center/contain no-repeat;
+    background: none;
     background-color: #e8d478;
-    height: 700px;
+    height: 600px;
     margin: 0;
   }
 
   .home__avatar {
+    width: 190px;
     margin-right: 0;
   }
 
@@ -704,8 +705,9 @@ button {
   }
 
   #home {
-    height: auto;
+    height: 420px;
   }
+
   .home__avatar {
     width: 100px;
   }
