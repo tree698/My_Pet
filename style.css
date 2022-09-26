@@ -164,7 +164,7 @@ button {
 
 /* Section: home */
 #home {
-  background: url(./img/home/bg6.png) center/contain no-repeat;
+  background: url(./img/home/bg3.png) center/contain no-repeat;
   background-color: #e8d478;
   height: 800px;
   display: flex;
@@ -209,6 +209,7 @@ button {
 .section {
   max-width: 1200px;
   padding: 50px;
+  padding-top: 80px;
   text-align: center;
   margin: auto;
 }
@@ -609,6 +610,7 @@ button {
 
   .section {
     padding: 16px;
+    padding-top: 80px;
   }
 
   .about__characters {
