@@ -39,10 +39,6 @@ homeContactBtn.addEventListener('click', () => {
   scrollIntoView('#contact');
 });
 
-function scrollIntoView(selector) {
-  document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
-}
-
 // Transparent Home
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
@@ -102,3 +98,68 @@ function addActive(element, dataName) {
       : child.classList.remove('active');
   }
 }
+
+// intersection observer API
+const sectionIds = [
+  'home',
+  'about',
+  'skills',
+  'gallery',
+  'testimonials',
+  'contact',
+];
+
+const sections = sectionIds.map((id) => document.querySelector(`#${id}`));
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove('active');
+  selectedNavItem = selected;
+  selectedNavItem.classList.add('active');
+}
+
+function scrollIntoView(selector) {
+  document.querySelector(selector).scrollIntoView({ behavior: 'smooth' });
+  // splice: 원본 배열을 변경하고 제거된 배열을 반환
+  const editedSelector = selector.split('').splice(1).join('');
+  selectNavItem(navItems[sectionIds.indexOf(editedSelector)]);
+}
+
+const observerCallback = (entries, observe) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(entry.target.id);
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+const options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.4,
+};
+
+const observer = new IntersectionObserver(observerCallback, options);
+sections.forEach((section) => observer.observe(section));
+
+document.addEventListener('wheel', () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+
+  selectNavItem(navItems[selectedNavIndex]);
+});
