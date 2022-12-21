@@ -15,7 +15,7 @@
 - 반응형 웹사이트 
 
 ## :medal_sports: 배포
-- [https://tree698.github.io/My_Pets/](https://tree698.github.io/My_Pets/)
+- [https://tree698.github.io/My_Pet//](https://tree698.github.io/My_Pet/)
 
 ## :medal_sports: 데모
 |**스크린 샷**|
