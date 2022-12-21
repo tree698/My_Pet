@@ -1,4 +1,4 @@
-# My Pets
+# My Pet
 
 ## :medal_sports: 개요
 - 반려동물 예삐를 소개하는 웹사이트
